@@ -1,0 +1,7 @@
+{
+  "name": "kimeraApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
