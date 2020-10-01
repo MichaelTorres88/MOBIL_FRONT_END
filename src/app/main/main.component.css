@@ -1,0 +1,27 @@
+table{
+    padding-top: 20px;
+    padding-bottom: 60px;
+    overflow-x:auto;
+    align-items: center;
+    align-self: center;
+}
+
+div{
+    overflow-x:auto;
+}
+
+td img{
+    width: 200px;
+    height: 150px;
+}
+
+td {
+    font-family: "Constantia", serif;
+    font-size: 50px;
+    color: blue;
+}
+
+img{
+    height: auto;
+    width: auto;
+}

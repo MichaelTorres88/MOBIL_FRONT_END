@@ -1,24 +1,36 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { NgModule } from '@angular/core';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { LAutorComponent } from './lautor/lautor.component';
+import { LibroTituloComponent } from './libro-titulo/libro-titulo.component';
+import { AutoresComponent } from './autores/autores.component';
+import { PresentacionComponent } from './presentacion/presentacion.component';
+import { OrientacionComponent } from './orientacion/orientacion.component';
+//import {DataService} from './data.service'
+//import {HttpClient, HttpClientModule} from '@angular/common/http';
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  declarations: [
+    AppComponent,
+    MainComponent,
+    HeaderComponent,
+    FooterComponent,
+    LAutorComponent,
+    LibroTituloComponent,
+    AutoresComponent,
+    PresentacionComponent,
+    OrientacionComponent
   ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    //HttpClientModule
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

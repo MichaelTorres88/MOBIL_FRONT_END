@@ -1,22 +1,27 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { mainModule } from 'process';
+import { AutoresComponent } from './autores/autores.component';
+import { LAutorComponent } from './lautor/lautor.component';
+import { LibroTituloComponent } from './libro-titulo/libro-titulo.component';
+import { MainComponent } from './main/main.component';
+import { OrientacionComponent } from './orientacion/orientacion.component';
+import { PresentacionComponent } from './presentacion/presentacion.component';
+//import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  {path: 'home', component: MainComponent},
+  {path: 'libro', component: LibroTituloComponent},
+  {path: 'autor', component: LAutorComponent},
+  {path: 'autores', component: AutoresComponent},
+  {path: 'presentacion', component: PresentacionComponent},
+  {path: 'orientacion', component: OrientacionComponent},
+  {path: '**', pathMatch: 'full', redirectTo:'home'}
+
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,21 @@
+h1 {
+    font-family: "Constantia", serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+p{
+    font-family: "Constantia", serif;
+    display: justify ;
+    font-size: 30px;
+    color: black;
+}
+
+
+a{
+    font-family: "Constantia", serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
